@@ -9,27 +9,86 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
-        <label for="user-name">nome</label>
-        <input type="text" id="user-name">
+    <div class="ms_container">
+
+    
+    <h2 class="uppercase">calcola il prezzo del tuo biglietto</h2>
+
+    <div class="ms_input_container">
+        <div class="flex">
 
         
+        <div class="name">
+            <div>
+                <label for="user-name">Nome</label>
 
-        <label for="user-age"></label>
-        <select class="form-select" id="user-age">
-            <option selected value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="over65">Over 65</option>
-          </select>
+            </div>
+            <input type="text" id="user-name">
+        </div>
 
-        <label for="user-km">km</label>
-        <input type="text" id="user-km">
+        
+        <div>
+            <div>
+                
+                <label for="user-age">Fascia d'età</label>
+            </div>
+            <select class="form-select" id="user-age">
+                <option selected value="maggiorenne">Maggiorenne</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="over65">Over 65</option>
+            </select>
+        </div>
+        <div>
+            <div>
 
-        <input  type="button" value="Calcola" id="btn">
+                <label for="user-km">Km da percorrere</label>
+            </div>
+            <input type="text" id="user-km">
+        </div>
+      </div>
+      <div class="btns">
+
+          <input  type="button" value="Calcola" id="btn-calc">
+          <input  type="button" value="Reset" id="btn-reset">
+        </div>
+
     </div>
 
-    <div id="message-html"></div>
+
+    <h2 class="uppercase">il tuo biglietto</h2>
+    <div class="ms_ticket_container">
+        <h3 class="uppercase">dettagi passegeri</h3>
+        <div class="table flex">
+            <div class="info-user">
+                <h3>Nome passegero</h3>
+                <h4></h4>
+                <div id="user-name-output"></div>
+            </div>
+
+            <div class="info-ticket">
+                <table>
+                    <tr>
+                      <th>Offerta</th>
+                      <th>Carozza</th>
+                      <th>Codice CP</th>
+                      <th>Costo biglietto</th>
+                    </tr>
+
+                    <tr>
+                      <td id="offert"></td>
+                      <td id="carriage"></td>
+                      <td id="CP"></td>
+                      <td id="price"></td>
+                    </tr>
+                    
+                  </table>
+            </div>
+        </div>
+
+    </div>
     
+    <h2 id="message-html"></h2>
+</div>
 
 
     <script src="js/script.js"></script>
